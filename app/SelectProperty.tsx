@@ -1,25 +1,24 @@
 "use client"
 import { Button } from '@/components/ui/button';
-import { Race, DndClass } from '@/lib/types';
+import { Card } from '@/components/ui/card';
+import { Race, DndClass, IndexItem } from '@/lib/types';
 import React, { useState } from 'react';
 
 interface SelectPropertyProps {
-    data: DndClass[] | Race[];
+    data: IndexItem[];
 }
-export default function SelectProperty({ data }: SelectPropertyProps) {
-    const [showData, setShowData] = useState(false)
+export default function DisplayList({ data }: SelectPropertyProps) {
+
     return (
-        <>
-            <Button onClick={() => setShowData(!showData)}>Show Data</Button>
-            {showData &&
-                <>hello?</>
-            }
-            {data.map((race, index) => (
-                <div key={index}>
-                    <h2>{race.name}</h2>
-                </div>
+        <div className="flex flex-wrap gap-3">
+            {data.map((item) => (
+                <Card key={item.index} className="w-1/4 bg-slate-300 p-3 hover:bg-slate-200">
+                    <h2>{item.name}</h2>
+                    <p>{item.url}</p>
+                </Card>
             ))}
 
-        </>
+
+        </div>
     )
 }

@@ -1,6 +1,6 @@
 export type GetAllResourcesList = {
   count: number;
-  results: DndClass[] | Race[];
+  results: IndexItem[];
 };
 
 export type DndClass = {
@@ -123,7 +123,7 @@ type AbilityBonus = {
   bonus: number;
 };
 
-type IndexItem = {
+export type IndexItem = {
   index: string;
   name: string;
   url: string;
