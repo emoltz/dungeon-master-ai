@@ -1,4 +1,9 @@
-type DndClass = {
+export type GetAllResourcesList = {
+  count: number;
+  results: IndexItem[];
+};
+
+export type DndClass = {
   index: string;
   name: string;
   hit_die: number;
@@ -13,7 +18,7 @@ type DndClass = {
   url: string;
 };
 
-type Race = {
+export type Race = {
   index: string;
   name: string;
   speed: number;
@@ -116,4 +121,10 @@ type Trait = ProficiencyChoiceOptionItem; // Reusing for traits as the structure
 type AbilityBonus = {
   ability_score: AbilityScore;
   bonus: number;
+};
+
+type IndexItem = {
+  index: string;
+  name: string;
+  url: string;
 };
