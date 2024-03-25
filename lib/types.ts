@@ -1,6 +1,6 @@
 export type GetAllResourcesList = {
   count: number;
-  results: IndexItem[];
+  results: DndClass[] | Race[];
 };
 
 export type DndClass = {

@@ -4,12 +4,14 @@ import { GetAllResourcesList } from "@/lib/types";
 
 
 export default async function Home() {
-  const raceData = await getRaces();  
+  const raceData = await getRaces();
 
   return (
     <>
-      {/* @ts-ignore */}
-      <SelectProperty data={raceData.results} />
+      <div className="p-3">
+        <SelectProperty data={raceData.results} />
+      </div>
+
 
     </>
   )
