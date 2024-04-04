@@ -1,6 +1,7 @@
 import { extractDataFromRaces, getRaces } from "@/lib/dndApiService";
 import SelectProperty from "./SelectProperty";
 import { GetAllResourcesList, IndexItem, Race } from "@/lib/types";
+import { Separator } from "@/components/ui/separator";
 
 export default async function Home() {
   const raceDataRaw: GetAllResourcesList = await getRaces();
@@ -9,8 +10,12 @@ export default async function Home() {
 
   return (
     <>
-      <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} />
-      
+      <div className="p-5">
+        <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} />
+        <div className="p-3">
+          <Separator />
+        </div>
+      </div>
     </>
   );
 }
