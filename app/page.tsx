@@ -10,6 +10,7 @@ export default async function Home() {
   return (
     <>
       <SelectProperty data={raceData} racesInfo={raceDataIndividual} />
+      
     </>
   );
 }
