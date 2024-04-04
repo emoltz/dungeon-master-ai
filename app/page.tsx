@@ -1,16 +1,15 @@
-import { getRaces } from "@/lib/dndApiService"
+import { extractDataFromRaces, getRaces } from "@/lib/dndApiService";
 import SelectProperty from "./SelectProperty";
-import { GetAllResourcesList, IndexItem } from "@/lib/types";
-
+import { GetAllResourcesList, IndexItem, Race } from "@/lib/types";
 
 export default async function Home() {
-  const raceDataRaw = await getRaces();  
+  const raceDataRaw: GetAllResourcesList = await getRaces();
   const raceData: IndexItem[] = raceDataRaw.results;
+  const raceDataIndividual: Race[] = await extractDataFromRaces(raceData);
 
   return (
     <>
-      <SelectProperty data={raceData} />
-
+      <SelectProperty data={raceData} racesInfo={raceDataIndividual} />
     </>
-  )
+  );
 }

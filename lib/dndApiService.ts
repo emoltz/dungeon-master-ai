@@ -1,4 +1,4 @@
-import { GetAllResourcesList } from "./types";
+import { GetAllResourcesList, IndexItem, Race } from "./types";
 
 export const BASE_URL = "https://www.dnd5eapi.co";
 export const routes = {
@@ -24,4 +24,17 @@ export async function getRaces(): Promise<GetAllResourcesList> {
     }
 
     return res.json();
+}
+
+export async function extractDataFromRaces(races: IndexItem[]): Promise<Race[]> {
+    const racesInfo: Race[] = [];
+    for (const race of races){
+        const res = await fetch(BASE_URL + race.url);
+        if (!res.ok) {
+            throw new Error("Failed to fetch");
+        }
+        const data: Race = await res.json();
+        racesInfo.push(data);
+    }
+    return racesInfo;
 }

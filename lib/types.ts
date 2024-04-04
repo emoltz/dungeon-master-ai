@@ -24,7 +24,7 @@ export type DndClass = {
 };
 
 export type Race = {
-  index: string;
+  index: string; // dragonborn, dwarf, elf, gnome, half-elf, halfling, half-orc, human, tiefling, etc.
   name: string;
   speed: number;
   ability_bonuses: AbilityBonus[];
