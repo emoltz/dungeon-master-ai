@@ -128,7 +128,7 @@ type AbilityBonus = {
   bonus: number;
 };
 
-type IndexItem = {
+export type IndexItem = {
   index: string;
   name: string;
   url: string;
