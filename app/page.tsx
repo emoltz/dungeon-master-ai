@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <>
-      <SelectProperty data={raceData} racesInfo={raceDataIndividual} />
+      <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} />
       
     </>
   );

@@ -5,7 +5,7 @@ import { Race, DndClass, IndexItem } from "@/lib/types";
 import React, { useState } from "react";
 
 interface SelectPropertyProps {
-  data: IndexItem[];
+  raceData: IndexItem[];
   racesInfo: Race[];
 }
 
@@ -17,7 +17,7 @@ function getRaceInfo(index: string, racesInfo: Race[]): Race | undefined {
   }
   return undefined;
 }
-export default function DisplayList({ data, racesInfo }: SelectPropertyProps) {
+export default function DisplayList({ raceData: data, racesInfo }: SelectPropertyProps) {
   return (
     <div className="flex flex-wrap gap-3">
       {data.map((item) => (
