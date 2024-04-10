@@ -16,13 +16,16 @@ export default async function Home() {
         <div className="h-screen flex flex-col">
           <div className="flex-1 flex">
             <div className="flex-1 bg-red-200">
+              character options
               {/* Content for top left section */}
             </div>
             <div className="flex-1 bg-blue-200">
+              Image of character
               {/* Content for top right section */}
             </div>
           </div>
           <div className="flex-1 bg-green-200">
+            adventure text
             {/* Content for bottom section */}
           </div>
         </div>
