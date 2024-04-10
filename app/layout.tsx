@@ -26,7 +26,12 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
-      >{children}</body>
+      >
+        <div className="p-5 bg-slate-200">
+          Navbar here
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

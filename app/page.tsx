@@ -11,20 +11,19 @@ export default async function Home() {
   return (
     <>
       <div className="p-5">
-        <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} />
-        <div className="p-3">
-          <Separator />
-          <div className="">
-            Choose Race
+        {/* <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} /> */}
+
+        <div className="h-screen flex flex-col">
+          <div className="flex-1 flex">
+            <div className="flex-1 bg-red-200">
+              {/* Content for top left section */}
+            </div>
+            <div className="flex-1 bg-blue-200">
+              {/* Content for top right section */}
+            </div>
           </div>
-          <div className="">
-            Choose Class
-          </div>
-          <div className="">
-            Choose Background
-          </div>
-          <div className="">
-            
+          <div className="flex-1 bg-green-200">
+            {/* Content for bottom section */}
           </div>
         </div>
       </div>
