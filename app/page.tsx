@@ -14,6 +14,18 @@ export default async function Home() {
         <SelectProperty raceData={raceData} racesInfo={raceDataIndividual} />
         <div className="p-3">
           <Separator />
+          <div className="">
+            Choose Race
+          </div>
+          <div className="">
+            Choose Class
+          </div>
+          <div className="">
+            Choose Background
+          </div>
+          <div className="">
+            
+          </div>
         </div>
       </div>
     </>
